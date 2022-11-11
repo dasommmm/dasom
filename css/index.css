@@ -41,15 +41,20 @@ h1{
 
 .cloud-one{
     position: absolute;
-    width: 60%;
-    height: 60%;
+    width: 700px;
+    bottom: 17em;
+    left: 40em;
+    animation: cloud-one 2s infinite alternate;
 
 }
 
 .cloud-two{
     position: absolute;
-    width: 60%;
-    height: 60%;
+    width: 700px;
+    left: 17em;
+    bottom: 17em;
+    animation: cloud-two 2s infinite alternate;
+
 }
 
 .mountain{
@@ -59,13 +64,36 @@ h1{
     /* height: 100%; */
     transform: scale(1.3);
     bottom: 0;
+    animation: mountain 2s 3 alternate;
+
     
 }
 
 .moon-one{
     position: absolute;
-    width: 330px;
-    height: 330px;
+    width: 20%;
+    /* height: 330px; */
+    bottom: 30em;
+    left: 20em;
+    animation: moon 2s 3 alternate;
+}
+
+@keyframes moon {
+    to{
+        transform: translateY(-30px)
+    }
+}
+
+@keyframes cloud-two {
+    to{
+        transform: translateX(-500px);
+    }
+}
+
+@keyframes cloud-one {
+    to{
+        transform: translateX(300px);
+    }
 }
 
 #intro{
