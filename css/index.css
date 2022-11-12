@@ -75,7 +75,7 @@ h1{
     /* height: 330px; */
     bottom: 30em;
     left: 20em;
-    animation: moon 2s 3 alternate;
+    animation: moon 2s infinite alternate;
 }
 
 @keyframes moon {
@@ -92,7 +92,7 @@ h1{
 
 @keyframes cloud-one {
     to{
-        transform: translateX(300px);
+        transform: translateX(500px);
     }
 }
 
