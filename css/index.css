@@ -123,7 +123,7 @@ h1{
 }
 
 .intro-con{
-    padding: 200px 0;
+    padding: 150px 0;
     max-width: 1320px;
     margin: 0 auto;
     display: flex;
@@ -132,14 +132,29 @@ h1{
     position: relative;
 }
 
+.me{
+    position: relative;
+    width: 50%;
+    padding-top: 90px;
+}
+
 .me-img{
-    width: 420px;
-    height: 603px;
+    /* z-index: 2; */
+    position: relative;
+    /* bottom: -150px; */
 }
 
 .me-img img{
+    margin: 0 auto;
+    /* width: 420px;
+    height: 603px; */
+    width: 60%;
+    border: 2px solid #E6E6E6;
     border-radius: 240px;
+}
 
+.star-con *{
+    position: absolute;
 }
 
 .star{
@@ -147,16 +162,47 @@ h1{
     height: 20px;
 }
 
+.circle-group{
+    /* width: 750px;
+    height: 239px; */
+    position: absolute;
+    width: 100%;
+    top: 120px;
+    /* bottom: 150px; */
+    left: 0;    
+    /* z-index: -1; */
+}
+
 .introduce{
+    width: 50%;
     font-family: 'GangwonEdu_OTFBoldA';
     color: #E6E6E6;
     font-size: 16px;
 }
 
+.introduce-one{
+    font-size: 24px;
+    padding-top: 100px
+}
+
+.introduce-two{
+    padding-top: 20px;
+}
+
+.introduce-three{
+    padding-top: 60px;
+}
+
+.dawn1{
+    bottom: -10px;
+    width: 50px;
+    padding-top: 130px;
+}
+
 h2{
     font-size: 64px;
     font-family: 'Cooper Black', sans-serif;
-    padding-top: 200px;
+    /* padding-top: 130px; */
 }
 
 .deco *{
@@ -177,4 +223,128 @@ h2{
     height: 530px;
     right: 0;
     top: 230px;
+}
+
+#resume{
+    background-color: #1C3044;
+}
+
+.tools{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px,1px,1px,1px);
+    overflow: hidden;
+}
+
+.title-circle{
+    width:280px;
+    height:100px;
+    border-radius:50% / 50%;
+    border: 1px solid #E6E6E6;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+.one{
+    width:280px;
+    height:100px;
+}
+
+.small-title{
+    font-size: 64px;
+    color: #E6E6E6;
+    text-align: center;
+    /* line-height: 150px; */
+}
+
+.icon-wrapper figure{
+    width: 71px;
+    height: 71px;
+}
+
+.tools-container{
+    padding-top: 100px;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 70px;
+    column-gap: 60px;
+    flex-wrap: wrap;
+}
+
+.icon-wrapper ul{
+    position: relative;
+    width: 500px;   
+}
+
+.icon-wrapper li{
+    background-color: #E6E6E6;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.bar{
+    position: absolute;
+    border-radius: 20px;
+    background-color: #80B0D1;
+    height: 40px;
+}
+
+.icon-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.html-progressbar{
+    width: 70%;
+    -moz-animation: css-progressbar 2s ease-out;
+    -webkit-animation: css-progressbar 2s ease-out;
+}
+
+.css-progressbar{
+    width: 60%;
+    -moz-animation: css-progressbar 2s ease-out;
+    -webkit-animation: css-progressbar 2s ease-out;
+}
+
+.js-progressbar{
+    width: 35%;
+    -moz-animation: css-progressbar 2s ease-out;
+    -webkit-animation: css-progressbar 2s ease-out;
+}
+
+.fig-progressbar{
+    width: 70%;
+    -moz-animation: css-progressbar 2s ease-out;
+    -webkit-animation: css-progressbar 2s ease-out;
+}
+
+.ps-progressbar{
+    width: 70%;
+    -moz-animation: css-progressbar 2s ease-out;
+    -webkit-animation: css-progressbar 2s ease-out;
+}
+
+.ai-progressbar{
+    width: 70%;
+    -moz-animation: css-progressbar 2s ease-out;
+    -webkit-animation: css-progressbar 2s ease-out;
+}
+
+.ae-progressbar{
+    width: 30%;
+    -moz-animation: css-progressbar 2s ease-out;
+    -webkit-animation: css-progressbar 2s ease-out;
 }
