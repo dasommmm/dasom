@@ -38,7 +38,8 @@ h1{
     top: 60%; */
     transform: translateY(7em) scale(0.5);
     text-shadow: 23px 18px 7px rgba(0, 0, 0, 0.25);
-    animation: text-move 2s infinite alternate;
+    animation: text-move 2s;
+    animation-fill-mode: both;
 
 }
 
@@ -47,7 +48,8 @@ h1{
     width: 60%;
     /* bottom: 17em; */
     left: 400px;
-    animation: cloud-one 2s infinite alternate;
+    animation: cloud-one 2s;
+    animation-fill-mode: both;
 
 }
 
@@ -59,7 +61,8 @@ h1{
     bottom: 100px;
     /* bottom: 17em; */
     /* transform: translateX(1em); */
-    animation: cloud-two 2s infinite alternate;
+    animation: cloud-two 2s;
+    animation-fill-mode: both;
 
 }
 
@@ -70,7 +73,8 @@ h1{
     /* height: 100%; */
     transform: scale(1.2);
     bottom: 0;
-    animation: mountain 2s infinite alternate;
+    animation: mountain 2s;
+    animation-fill-mode: both;
 
     
 }
@@ -81,9 +85,16 @@ h1{
     /* height: 330px; */
     bottom: 30em;
     left: 10em;
-    animation: moon 2s infinite alternate;
+    animation: moon 2s;
+    animation-fill-mode: both;
 }
 
+
+.새클래스 {
+    animation: 새애니메이션 2s;
+    /* 로드 된 이후에 2초 후 새 클래스 추가 onload 로드된 이후 검색
+    settimeout으로 2초*/
+}
 @keyframes moon {
     from{
         /* transform: translateY(4em); */
@@ -148,7 +159,7 @@ h1{
     margin: 0 auto;
     /* width: 420px;
     height: 603px; */
-    width: 60%;
+    width: 65%;
     border: 2px solid #E6E6E6;
     border-radius: 240px;
 }
@@ -166,10 +177,10 @@ h1{
     /* width: 750px;
     height: 239px; */
     position: absolute;
-    width: 100%;
+    width: 110%;
     top: 120px;
     /* bottom: 150px; */
-    left: 0;    
+    left: -30px;    
     /* z-index: -1; */
 }
 
@@ -405,7 +416,90 @@ h2{
     }
 }
 
+/* 애니메이션 자바스크립트로 실행하고 싶은데 애니메이션 7개라서ㅜㅜ 어떤식으로?
+bar를 가져와주면 됨 둘다 span임  */
+/* 메인 사진들 로드하면 한번만 움직이도록 어떻게? */
+
+.soft-skills{
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
 .title-two{
     width: 447px;
     height: 124px;
+}
+
+.ss-wrapper{
+    max-width: 1096px;
+    margin: 0 auto;
+    padding: 0 178px;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* justify-content: center; */
+    /* column-gap: 300px; */
+    row-gap: 100px;
+    
+}
+
+.img-wrap img{
+    /* width: 120px; */
+    /* height: 224px; */
+    width: 100%;
+}
+
+.img-wrap svg{
+    /* width: 120px; */
+    /* height: 114px; */
+    width: 100%;
+    height: 100%;
+}
+
+.img-wrap{
+    padding: 32px 32px;
+    width: 184px;
+    height: 184px;
+}
+
+.ss-one,.ss-two,.ss-three,.ss-four{
+    /* width: 200px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #E6E6E6;
+    position: relative;
+    flex-basis: calc(40% - 16px);
+}
+
+.ss-explanation{
+    padding-left: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #E6E6E6;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 16px;
+    color: #E6E6E6;
+}
+
+.ss-explanation p{
+    padding-bottom: 10px;
+}
+
+.rectangle{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    border: 1px solid #E6E6E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Cooper Black', sans-serif;
+    color: #E6E6E6;
 }
