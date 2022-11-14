@@ -107,7 +107,7 @@ h1{
 
 @keyframes mountain {
     to{
-        transform: scale(1) translateY(5em);
+        transform: scale(1) translateY(9em);
     }
 }
 
@@ -256,9 +256,9 @@ h2{
 
 }
 
-.one{
-    width:280px;
-    height:100px;
+.title-one{
+    width:305px;
+    height:92px;
 }
 
 .small-title{
@@ -309,42 +309,103 @@ h2{
 
 .html-progressbar{
     width: 70%;
-    -moz-animation: css-progressbar 2s ease-out;
-    -webkit-animation: css-progressbar 2s ease-out;
+    animation: html-progressbar 2s ease-out;
 }
 
 .css-progressbar{
     width: 60%;
-    -moz-animation: css-progressbar 2s ease-out;
-    -webkit-animation: css-progressbar 2s ease-out;
+    animation: css-progressbar 2s ease-out;
 }
 
 .js-progressbar{
     width: 35%;
-    -moz-animation: css-progressbar 2s ease-out;
-    -webkit-animation: css-progressbar 2s ease-out;
+    animation: js-progressbar 2s ease-out;
 }
 
 .fig-progressbar{
     width: 70%;
-    -moz-animation: css-progressbar 2s ease-out;
-    -webkit-animation: css-progressbar 2s ease-out;
+    animation: fig-progressbar 2s ease-out;
 }
 
 .ps-progressbar{
     width: 70%;
-    -moz-animation: css-progressbar 2s ease-out;
-    -webkit-animation: css-progressbar 2s ease-out;
+    animation: ps-progressbar 2s ease-out;
 }
 
 .ai-progressbar{
     width: 70%;
-    -moz-animation: css-progressbar 2s ease-out;
-    -webkit-animation: css-progressbar 2s ease-out;
+    animation: ai-progressbar 2s ease-out;
 }
 
 .ae-progressbar{
     width: 30%;
-    -moz-animation: css-progressbar 2s ease-out;
-    -webkit-animation: css-progressbar 2s ease-out;
+    animation: ae-progressbar 2s ease-out;
+}
+
+@keyframes html-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 70%;
+    }
+}
+
+@keyframes css-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 60%;
+    }
+}
+
+@keyframes js-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 35%;
+    }
+}
+
+@keyframes fig-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 70%;
+    }
+}
+
+@keyframes ps-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 70%;
+    }
+}
+
+@keyframes ai-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 70%;
+    }
+}
+
+@keyframes ae-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 30%;
+    }
+}
+
+.title-two{
+    width: 447px;
+    height: 124px;
 }
