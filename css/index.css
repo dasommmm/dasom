@@ -503,3 +503,40 @@ bar를 가져와주면 됨 둘다 span임  */
     font-family: 'Cooper Black', sans-serif;
     color: #E6E6E6;
 }
+
+.title-three{
+    width: 380px;
+    height: 116px;
+}
+
+.interest-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 874px;
+    margin: 0 auto;
+    padding: 100px 0 200px;
+}
+
+.interest-icon figure{
+    width: 167px;
+}
+
+.interest-icon p{
+    font-size: 20px;
+    color: #E6E6E6;
+    font-family: 'GangwonEdu_OTFBoldA';
+    text-align: center;
+    padding-top: 48px;
+}
+
+.title-four{
+    width: 322px;
+    height: 108px;
+}
+
+.ability-wrapper{
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
