@@ -538,5 +538,66 @@ bar를 가져와주면 됨 둘다 span임  */
 .ability-wrapper{
     max-width: 1320px;
     margin: 0 auto;
+    text-align: left;
 }
 
+.ability-wrapper ul{
+    padding-top: 100px;
+    padding-bottom: 200px;
+    width: 515px;
+    margin: 0 auto;
+    list-style: disc;
+}
+
+.ability-wrapper li{
+    font-size: 20px;
+    color: #e6e6e6;
+    font-family: 'GangwonEdu_OTFBoldA';
+    padding-bottom: 20px;
+}
+
+.title-five{
+    width: 413px;
+    height: 121px;
+}
+
+.star1,.star3{
+    width: 21px;
+    /* height: 35px; */
+}
+
+.star2{
+    width: 42px;
+    /* height: 65px; */
+}
+
+.star4{
+    width: 90px;
+}
+
+.arrow img{
+    width: 104px;
+    position: absolute;
+}
+
+.slide-contents{
+    display: flex;
+}
+
+.slide-wrapper{
+    width: 800px;
+    height: 450px;
+}
+
+.pofol{
+    position: relative;
+}
+
+.pofol img{
+    width: 800px;
+    height: 450px;
+}
+
+.black{
+    position: absolute;
+}
