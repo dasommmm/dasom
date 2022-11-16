@@ -584,8 +584,11 @@ bar를 가져와주면 됨 둘다 span임  */
     display: flex;
     border: 2px solid #F7F6F6;
     height: 100%;
-    box-sizing: border-box;
+    width: 100%;
+    /* box-sizing: border-box; */
     border-radius: 225px;
+    overflow: hidden;
+    position: relative;
 
 
 }
@@ -596,20 +599,16 @@ bar를 가져와주면 됨 둘다 span임  */
     height: 450px;
     padding-top: 100px;
     padding-bottom: 200px;
-    overflow: hidden;
     
 }
 
 .pofol{
-    /* position: relative; */
     position: absolute;
     /* opacity: 0; */
     /* 자바할때 opacity 0 기본으로 해주고! 지금은 헷갈리니까 지워주기 */
 }
 
 .pofol img{
-    /* border: 2px solid #F7F6F6; */
-    border-radius: 225px;
     width: 800px;
     height: 450px;
 }
@@ -633,3 +632,41 @@ bar를 가져와주면 됨 둘다 span임  */
 
 
 /* 구글에 디졸브 캐러셀 */
+
+footer{
+    background-color: #061420;
+    font-family: 'Cooper Black', sans-serif;
+    color: #E6E6E6;
+    text-align: center;
+}
+
+.e-mail{
+    padding-top: 50px;
+}
+
+.contact-wrapper div{
+    display: flex;
+    /* justify-content: center; */
+    width: 400px;
+    margin: 0 auto;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+.contact-wrapper div p{
+    padding-left: 20px;
+}
+
+.contact-wrapper div a{
+    padding-left: 20px;
+}
+
+h3{
+    font-size: 100px;
+    padding-top: 150px;
+}
+
+.thanks{
+    font-family: 'GangwonEdu_OTFBoldA';
+
+}
