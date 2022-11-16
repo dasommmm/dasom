@@ -582,6 +582,12 @@ bar를 가져와주면 됨 둘다 span임  */
 
 .slide-contents{
     display: flex;
+    border: 2px solid #F7F6F6;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 225px;
+
+
 }
 
 .slide-wrapper{
@@ -591,20 +597,21 @@ bar를 가져와주면 됨 둘다 span임  */
     padding-top: 100px;
     padding-bottom: 200px;
     overflow: hidden;
+    
 }
 
 .pofol{
     /* position: relative; */
     position: absolute;
-    opacity: 0;
+    /* opacity: 0; */
+    /* 자바할때 opacity 0 기본으로 해주고! 지금은 헷갈리니까 지워주기 */
 }
 
 .pofol img{
-    border: 2px solid #F7F6F6;
+    /* border: 2px solid #F7F6F6; */
     border-radius: 225px;
     width: 800px;
     height: 450px;
-    box-sizing: border-box;
 }
 
 .black{
