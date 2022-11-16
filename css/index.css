@@ -638,6 +638,7 @@ footer{
     font-family: 'Cooper Black', sans-serif;
     color: #E6E6E6;
     text-align: center;
+    position: relative;
 }
 
 .e-mail{
@@ -650,7 +651,7 @@ footer{
     width: 400px;
     margin: 0 auto;
     font-size: 24px;
-    padding-bottom: 20px;
+    padding-bottom: 36px;
 }
 
 .contact-wrapper div p{
@@ -659,6 +660,7 @@ footer{
 
 .contact-wrapper div a{
     padding-left: 20px;
+    color: #e6e6e6;
 }
 
 h3{
@@ -668,5 +670,27 @@ h3{
 
 .thanks{
     font-family: 'GangwonEdu_OTFBoldA';
+    padding-bottom: 200px;
+    padding-top: 330px;
+}
 
+.img-con *{
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-moon{
+    width: 150px;
+}
+
+.ellipse{
+    width: 770px;
+    bottom: 0;
+    left: 23%;
+}
+
+.star-back{
+    width: 600px;
+    right: 0;
+    z-index: ;
 }
