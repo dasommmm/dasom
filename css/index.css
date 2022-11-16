@@ -596,6 +596,7 @@ bar를 가져와주면 됨 둘다 span임  */
 .pofol{
     /* position: relative; */
     position: absolute;
+    opacity: 0;
 }
 
 .pofol img{
