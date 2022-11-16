@@ -594,7 +594,8 @@ bar를 가져와주면 됨 둘다 span임  */
 }
 
 .pofol{
-    position: relative;
+    /* position: relative; */
+    position: absolute;
 }
 
 .pofol img{
@@ -621,3 +622,6 @@ bar를 가져와주면 됨 둘다 span임  */
 .pofol:hover .black{
     opacity: 1;
 }
+
+
+/* 구글에 디졸브 캐러셀 */
