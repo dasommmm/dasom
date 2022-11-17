@@ -638,11 +638,15 @@ footer{
     font-family: 'Cooper Black', sans-serif;
     color: #E6E6E6;
     text-align: center;
-    position: relative;
+    /* position: relative; */
 }
 
 .e-mail{
-    padding-top: 50px;
+    padding-top: 100px;
+}
+
+.contact-wrapper {
+    position: relative;
 }
 
 .contact-wrapper div{
@@ -671,8 +675,12 @@ h3{
 .thanks{
     font-family: 'GangwonEdu_OTFBoldA';
     padding-bottom: 200px;
-    padding-top: 330px;
+    z-index: 1;
+    /* position: relative; */
+    line-height: 25px;
+    padding-top: 200px;
 }
+
 
 .img-con *{
     position: absolute;
@@ -681,16 +689,26 @@ h3{
 
 .footer-moon{
     width: 150px;
+    left: 200px;
+    bottom: 150px;
 }
 
 .ellipse{
-    width: 770px;
+    /* width: 770px; */
+    /* width: 60%; */
+    width: 40em;
+    /* height: 200px; */
     bottom: 0;
-    left: 23%;
+    left: 27%;
 }
 
 .star-back{
     width: 600px;
     right: 0;
-    z-index: ;
+    /* z-index: 0; */
+}
+
+.line-2{
+    width: 100%;
+    bottom: 100px;
 }
