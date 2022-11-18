@@ -9,3 +9,21 @@
 
 /* 자바할때 on 빼고 작업
 작업하기 어려우니까 on 넣어주고 */
+
+.moon-move{
+    animation: moon-move 2s alternate infinite;
+}
+
+.cloud1-move{
+    
+}
+
+.cloud1-move{
+    
+}
+
+@keyframes moon-move{
+    to{
+        transform: translateY(10px);
+    }
+}
