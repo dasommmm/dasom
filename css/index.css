@@ -164,7 +164,7 @@ h1{
     border-radius: 240px;
 }
 
-.star-con *{
+.star-con1 figure{
     position: absolute;
 }
 
@@ -612,29 +612,67 @@ bar를 가져와주면 됨 둘다 span임  */
     position: relative;
 }
 
-.star1,.star3{
+.slide-wrapper{
+    margin: 0 auto;
+    width: 800px;
+    height: 450px;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    
+}
+
+.slide-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.star-con figure{
+    position: absolute;
+}
+
+.star-con{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.star1{
     width: 21px;
-    /* height: 35px; */
+    right: 40px;
+    bottom: 0;
 }
 
 .star2{
     width: 42px;
-    /* height: 65px; */
+    left: 10px;
+    top: -10px;
+}
+
+.star3{
+    width: 21px;
+    left: -10px;
+    top: 60px;
+
 }
 
 .star4{
     width: 90px;
+    bottom: 20px;
+    right: -50px;
 }
 
 .buttons{
     display: flex;
-    width: 80%;
+    width: calc(100% + 240px);
     /* padding-left: 60px; */
     /* margin: 0 auto; */
     justify-content: space-between;
     position: absolute;
-    bottom: 50%;
-    padding: 0 130px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .arrow img{
@@ -655,15 +693,6 @@ bar를 가져와주면 됨 둘다 span임  */
     position: relative;
 
 
-}
-
-.slide-wrapper{
-    margin: 0 auto;
-    width: 800px;
-    height: 450px;
-    padding-top: 100px;
-    padding-bottom: 200px;
-    
 }
 
 .pofol{
@@ -742,15 +771,14 @@ h3{
 }
 
 
-.img-con *{
+.img-con figure{
     position: absolute;
-    bottom: 0;
 }
 
 .footer-moon{
     width: 100px;
-    left: 32%;
-    bottom: 25%;
+    left: 17%;
+    bottom: 71%;
     /* transform: translateX(-30%); */
 }
 
@@ -767,6 +795,7 @@ h3{
 .star-back{
     width: 800px;
     right: 0;
+    bottom: 0;
     /* z-index: 0; */
 }
 
