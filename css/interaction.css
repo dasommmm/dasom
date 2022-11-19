@@ -11,19 +11,21 @@
 작업하기 어려우니까 on 넣어주고 */
 
 .moon-move{
-    animation: moon-move 2s alternate infinite;
+    animation: moving 2s alternate infinite;
 }
 
 .cloud1-move{
-    
+    animation: moving 1.5s alternate infinite; 
 }
 
-.cloud1-move{
-    
+.cloud2-move{
+    animation: moving 1s alternate infinite;
+
 }
 
-@keyframes moon-move{
+@keyframes moving{
     to{
         transform: translateY(10px);
     }
 }
+

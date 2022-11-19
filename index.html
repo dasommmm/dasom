@@ -12,7 +12,7 @@
 <body>
     <main>
         <section id="title">
-            <figure class="moon-one moon-move">
+            <figure class="moon-one">
                 <img src="img/moon.png" alt="달">
             </figure>
             <h1>
@@ -23,14 +23,13 @@
                 <img src="img/mountain.png" alt="산">
             </figure>
             <div class="cloud">
-                <figure class="cloud-one cloud1-move">
+                <figure class="cloud-one">
                     <img src="img/pngwing(1).png" alt="구름1">
                 </figure>
-                <figure class="cloud-two cloud2-move">
+                <figure class="cloud-two">
                     <img src="img/pngwing.png" alt="구름2">
                 </figure>
             </div>
-            
         </section>
         <section id="intro">
             <div class="intro-con">
@@ -76,7 +75,7 @@
                         <br>내가 원하는 ui를 마크업하고 상상했던 모션을 추가하면서 흥미가 생겼고
                         <br>그 과정 속에서 매일 매일 조금씩 발전하는 제 모습이 마음에 들었습니다.
                         <br>현실에 안주하지 않고 성장해나가며 
-                        <br>진실된 마음으로 사용자를 먼저 생각하는 웹퍼블리셔가 되는 것이 저의 목표입니다.
+                        <br class="br-hide">진실된 마음으로 사용자를 먼저 생각하는 웹퍼블리셔가 되는 것이 저의 목표입니다.
                     </p>
                     <figure class="dawn1">
                         <img src="img/dawn(1).png" alt="별">
@@ -344,13 +343,14 @@
                                 </figure>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="arrow-left arrow">
+                                <div class="arrow-left arrow">
                                     <img src="img/ep_arrow-left-bold.svg" alt="arrow">
-                                </a>
-                                <a href="#" class="arrow-right arrow">
+                                </div>
+                                <div class="arrow-right arrow">
                                     <img src="img/ep_arrow-right-bold.svg" alt="arrow">
-                                </a>
+                                </div>
                                 <!-- 여기는 href안해도 되나요 -->
+                                <!-- 버튼태그를 img로 바꾸는 법을 모르겟어요ㅜㅜ div로 해도 되나요 -->
                             </div>
                             <div class="slide-contents">
                                 <div class="pofol pf-one">
@@ -364,8 +364,10 @@
                                             <br>어플리케이션의 uxui를 목업을 활용하여 디자인하였고
                                             <br>이를 소개하는 홈페이지를 만들었습니다.
                                         </p>
-                                        <a href="#">기획서></a>
-                                        <a href="#">홈페이지></a>
+                                        <div class="a-con">
+                                            <a href="#">기획서></a>
+                                            <a href="https://dasommmm.github.io/daisy-paws/">홈페이지></a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="pofol pf-two">
@@ -378,8 +380,34 @@
                                             기존의 lush 홈페이지를 리디자인 해보았습니다.
                                             <br>lush 본연의 색을 잃지 않고 독특하게 표현하려 노력했습니다.
                                         </p>
+                                        <div class="a-con">
+                                            <a href="#">기획서></a>
+                                            <a href="https://dasommmm.github.io/lush/">홈페이지></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 이거  여기에 하면 될까요 -->
+                            <div class="only-mobile">
+                                <div class="pc-hide">
+                                    <p>
+                                        daisy paws라는 가상의 브랜드로 어플리케이션을 기획해보았습니다.
+                                        <br>어플리케이션의 uxui를 목업을 활용하여 디자인하였고
+                                        <br>이를 소개하는 홈페이지를 만들었습니다.
+                                    </p>
+                                    <div class="a-con">
                                         <a href="#">기획서></a>
-                                        <a href="#">홈페이지></a>
+                                        <a href="https://dasommmm.github.io/daisy-paws/">홈페이지></a>
+                                    </div>
+                                </div>
+                                <div class="pc-hide">
+                                    <p>
+                                        기존의 lush 홈페이지를 리디자인 해보았습니다.
+                                        <br>lush 본연의 색을 잃지 않고 독특하게 표현하려 노력했습니다.
+                                    </p>
+                                    <div class="a-con">
+                                        <a href="#">기획서></a>
+                                        <a href="https://dasommmm.github.io/lush/">홈페이지></a>
                                     </div>
                                 </div>
                             </div>
