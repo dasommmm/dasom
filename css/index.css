@@ -284,7 +284,11 @@ h1{
     font-family: 'GangwonEdu_OTFBoldA';
     color: #E6E6E6;
     font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
 
 .introduce-one{
     font-size: 24px;
@@ -314,8 +318,11 @@ h2{
     /* padding-top: 130px; */
 }
 
-.deco *{
-    position: absolute;
+.intro-deco{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .small-circle{
@@ -323,15 +330,16 @@ h2{
     height: 15px;
     border-radius: 50%;
     background-color: #E6E6E6;
-    right: 3px;
-    bottom: 18%;
+    /* right: 3px; */
+    /* bottom: 18%; */
+    
 }
 
 .line-1{
     width: 1px;
     height: 530px;
-    right: 10px;
-    top: 230px;
+    /* right: 10px;
+    top: 230px; */
 }
 
 #resume{
@@ -542,12 +550,6 @@ bar를 가져와주면 됨 둘다 span임  */
     
 }
 
-.img-wrap img{
-    /* width: 120px; */
-    /* height: 224px; */
-    width: 100%;
-}
-
 .img-wrap svg{
     /* width: 120px; */
     /* height: 114px; */
@@ -562,7 +564,6 @@ bar를 가져와주면 됨 둘다 span임  */
 }
 
 .ss-one,.ss-two,.ss-three,.ss-four{
-    /* width: 200px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -677,6 +678,21 @@ bar를 가져와주면 됨 둘다 span임  */
     position: relative;
 }
 
+.slide-container::before{
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #e6e6e6;
+    border-radius: 300px;
+    width: calc(100% + 28px);
+    height: calc(100% + 28px);
+    /* width: 832px; */
+    /* height: 482px; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+}
 
 .star-con figure{
     position: absolute;
@@ -762,7 +778,7 @@ bar를 가져와주면 됨 둘다 span임  */
     border: 2px solid #F7F6F6;
     height: 100%;
     width: 100%;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     border-radius: 225px;
     overflow: hidden;
     position: relative;
@@ -844,6 +860,23 @@ bar를 가져와주면 됨 둘다 span임  */
 
 /* 구글에 디졸브 캐러셀 */
 
+.pf-deco{
+    position: relative;
+}
+
+.pf-line{
+    width: 90%;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-bottom: 100px;
+}
+
+.pf-circle{
+    position: absolute;
+    bottom: 90px;
+    right: 35px;
+}
+
 footer{
     background-color: #061420;
     font-family: 'Cooper Black', sans-serif;
@@ -854,6 +887,11 @@ footer{
 
 .e-mail{
     padding-top: 100px;
+}
+
+.contact-wrapper{
+    position: relative;
+    z-index: 1;
 }
 
 .contact-wrapper div{
@@ -926,23 +964,52 @@ h3{
 }
 
 .line-2{
-    width: 100%;
+    width: 98vw;
+    /* 이거 왜 100vw하면 튀어나오나요? */
     bottom: 80px;
 }
 
 
-/* 1239 860 599 */
+/* 1240 905 599 */
 
-@media screen and (max-width: 1239px) {
+@media screen and (max-width: 1240px) {
+    h1{
+        font-size: 80px;
+    }
+
+    .cloud-one{
+        bottom: 350px;
+    }
+
     @keyframes mountain {
         to{
             transform: scale(1) translateY(3em);
         }
     }
 
+    @keyframes text-move {
+        to{
+            transform: translateY(5em) scale(1);
+        }
+    }
+
+    @keyframes cloud-two {
+        to{
+            transform: translateX(-300px);
+        }
+    }
+    
+    @keyframes cloud-one {
+        to{
+            transform: translateX(200px);
+        }
+    }
+
     .intro-con{
         flex-direction: column;
         max-width: 770px;
+        padding: 150px 0;
+
     }
 
     .me{
@@ -959,5 +1026,51 @@ h3{
 
     .tools{
         max-width: 770px;
+    }
+
+    .tools-container{
+        justify-content: center;
+    }
+
+    .soft-skills{
+        max-width: 770px;
+    }
+
+    .ss-wrapper{
+        max-width: 770px;
+        padding: 100px 0 200px 0;
+    }
+
+    .interest-icon{
+        width: 770px;
+    }
+
+    .slide-wrapper{
+        width: 600px;
+        height: 345px;
+    }
+
+    .black{
+        width: 600px;
+        height: 345px;
+    }
+
+    .pofol figure img{
+        width: 600px;
+        height: 345px;
+        
+    }
+
+    .star-con {
+        width: 106%;
+        height: 111%;
+        left: -25px;
+        top: -15px;
+    }
+}
+
+@media screen and (max-width: 905px){
+    h1{
+        font-size: 80px;
     }
 }
