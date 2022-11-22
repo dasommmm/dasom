@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>그냥 네모 박스를 돌려보자.</title>
+	<style>
+		.box{
+			background-color: #fb2020;
+			display:block;
+			margin:0 auto;
+			padding:10px;
+			height:600px;width:600px;
+		    -webkit-animation:spin 4s linear infinite;
+		    -moz-animation:spin 4s linear infinite;
+		    animation:spin 4s linear infinite;
+		}
+		.table{display:table;position:relative;width:100%;height:100%;margin-top: 200px;}
+		.cell{display:table-cell;}
+		@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+		@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+		@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+        .n{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            animation:spin1 4s linear infinite;
+
+        }
+
+        @keyframes spin1 {
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+	</style>
+</head>
+<body>
+	<!-- <div class="table">
+		<div class="cell">
+			<div class="box"></div>
+		</div>
+	</div> -->
+
+    <div class="n"></div>
+</body>
+</html>
