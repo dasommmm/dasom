@@ -650,6 +650,7 @@ bar를 가져와주면 됨 둘다 span임  */
     color: #e6e6e6;
     font-family: 'GangwonEdu_OTFBoldA';
     padding-bottom: 20px;
+    line-height: 25px;
 }
 
 .title-five{
@@ -838,7 +839,11 @@ bar를 가져와주면 됨 둘다 span임  */
     color: #e6e6e6;   
 }
 
-.pc-hide{
+.only-mobile{
+    display: none;
+}
+
+.pofol-content{
     font-size: 20px;
     font-family: 'GangwonEdu_OTFBoldA';
     color: #e6e6e6;
@@ -847,7 +852,6 @@ bar를 가져와주면 됨 둘다 span임  */
     flex-direction: column;
     align-items: center;
     justify-content: center; 
-    display: none;
 }
 
 .pc-hide a{
@@ -1078,11 +1082,13 @@ h3{
     .slide-wrapper{
         width: 600px;
         height: 345px;
+        padding-bottom: 250px;
     }
 
     .black{
         width: 600px;
         height: 345px;
+        display: none;
     }
 
     .pofol figure img{
@@ -1097,6 +1103,33 @@ h3{
 
     .arrow img{
         width: 77px;
+    }
+
+    .only-mobile{
+        display: block;
+        position: relative;
+        
+    }
+
+    .pofol-content{
+        position: absolute;
+        top: 0;
+        top: -200px;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .pofol-content a{
+        font-size: 20px;
+        font-family: 'GangwonEdu_OTFBoldA';
+        color: #e6e6e6;   
+    }
+
+    .pofol-content .a-con{
+        padding-top: 20px;
+        /* font-size: ; */
     }
 
     .star-con {
@@ -1166,7 +1199,7 @@ h3{
     }
 
     .me{
-        width: 110%;
+        width: 90%;
     }
 
     .me-img img{
@@ -1174,7 +1207,7 @@ h3{
     }
 
     .circle-group {
-        width: 120%;
+        width: 110%;
     }
 
     .introduce{
@@ -1191,7 +1224,7 @@ h3{
     }
 
     h2{
-        font-size: 50px;
+        font-size: 35px;
     }
 
     .tools{
@@ -1222,8 +1255,13 @@ h3{
         width: 280px;
     }
 
+    .title-two {
+        width: 303px;
+        height: 99px;
+    }
+
     .ss-wrapper {
-        max-width: 380px;
+        max-width: 328px;
     }
 
     .ss-one, .ss-two, .ss-three, .ss-four {
@@ -1232,5 +1270,113 @@ h3{
         flex-basis: 100%;
         width: 380px;
     }
+
+    .title-three {
+        width: 287px;
+        height: 91px;
+    }
+
+    .interest-icon {
+        width: 328px;
+    }
+
+    .interest-icon figure {
+        width: 80px;
+    }
+
+    .title-four {
+        width: 237px;
+        height: 95px;
+    }
     
+    .ability-wrapper ul {
+        width: 328px;
+    }
+
+    .title-five {
+        width: 289px;
+        height: 99px;
+    }
+
+    .slide-wrapper{
+        width: 200px;
+        height: 450px;
+        padding-bottom: 300px;
+    }
+
+    .star-con {
+        width: 129%;
+        height: 121%;
+        left: -46px;
+        top: -33px;
+    }
+
+    .arrow img {
+        width: 40px;
+    }
+
+    .buttons{
+        width: calc(100% + 100px);
+    }
+
+    .pf-two figure img {
+        width: 800px;
+        height: 450px;
+        transform: translateX(-12%);
+    }
+
+    .pf-one figure img {
+        width: 800px;
+        height: 450px;
+        transform: translateX(-49%);
+    }
+
+    .black{
+        width: 200px;
+        height: 450px;
+        font-size: 16px;
+    }
+
+    .pofol-content{
+        width: 328px;
+    }
+
+    .mo-hide{
+        display: none;
+    }
+
+    .pf-deco{
+        padding-top: 60px;
+    }
+
+    .contact-wrapper h3{
+        font-size: 80px;
+    }
+
+    .contact-wrapper div {
+        width: 328px;
+        font-size: 20px;
+    }
+
+    .contact-wrapper div p{
+        padding-left: 0;
+    }
+
+    .e-mail {
+        padding-top: 50px;
+    }
+
+    .star-back {
+        /* width: 300px; */
+    }
+
+    .ellipse{
+        width: 100px;
+    }
+
+    .line-2{
+        /* width: calc(100% - 17px); */
+        width: 100%;
+    }
+
 }
