@@ -291,6 +291,7 @@ h1{
 .introduce-one{
     font-size: 24px;
     padding-top: 10px;
+
 }
 
 .introduce-two{
@@ -301,7 +302,6 @@ h1{
 .introduce-three{
     padding-top: 40px;
     line-height: 23px;
-
 }
 
 .dawn1{
@@ -1106,8 +1106,7 @@ h3{
 }
 
 .line-2{
-    width: 98vw;
-    /* 이거 왜 100vw하면 튀어나오나요? */
+    width: calc(100vw - 17px);
     bottom: 80px;
 }
 
