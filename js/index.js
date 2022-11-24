@@ -1,26 +1,31 @@
+introMove();
+makeMove('move-top','0.6s');
 modalDS();
 
-const introText = document.getElementsByClassName('intro-text');
-const introOne = document.getElementsByClassName('introduce-one');
-const introTwo = document.getElementsByClassName('introduce-two');
-const introThree = document.getElementsByClassName('introduce-three');
-
-for(let i=0; i<introText.length; i++){
-    window.addEventListener('scroll',()=>{
-        console.log(introText[i].getBoundingClientRect().top - window.innerHeight);
-        if(introText[i].getBoundingClientRect().top - window.innerHeight < 0){
-            introOne[i].classList.add('show');
-            introTwo[i].classList.add('show');
-            introThree[i].classList.add('show');
-
-        }else{
-            introOne[i].classList.remove('show') ; 
-            introTwo[i].classList.remove('show') ; 
-            introThree[i].classList.remove('show') ; 
-
-        }
-    })
+function introMove(){
+    const introText = document.getElementsByClassName('intro-text');
+    const introOne = document.getElementsByClassName('introduce-one');
+    const introTwo = document.getElementsByClassName('introduce-two');
+    const introThree = document.getElementsByClassName('introduce-three');
+    
+    for(let i=0; i<introText.length; i++){
+        window.addEventListener('scroll',()=>{
+            console.log(introText[i].getBoundingClientRect().top - window.innerHeight);
+            if(introText[i].getBoundingClientRect().top - window.innerHeight < 0){
+                introOne[i].classList.add('show');
+                introTwo[i].classList.add('show');
+                introThree[i].classList.add('show');
+                
+            }else{
+                introOne[i].classList.remove('show') ; 
+                introTwo[i].classList.remove('show') ; 
+                introThree[i].classList.remove('show') ; 
+                
+            }
+        })
+    }
 }
+
 
 
 // makeMove('summary-icon','0.6s');
@@ -46,10 +51,34 @@ for(let i=0; i<introText.length; i++){
 //         })
 //     }
 // }
+// =================================================================
+
+function makeMove(className,time){
+    const nameCon = document.getElementsByClassName(className);
+
+    for(let i=0; i<nameCon.length; i++){
+        window.addEventListener('scroll',()=>{
+            if(nameCon[i].getBoundingClientRect().top - window.innerHeight < 0){
+                nameCon[i].classList.add('show');
+                nameCon[i].style.transitionDuration = time;
+            }else{
+                nameCon[i].classList.remove('show');
+                nameCon[i].style.transitionDuration = time;
+            }
+        })
+    }
+}
+
+// =======================================================
+
+
 
 // ====================================================모달창
 // open-lush누르면 모달이 뜨는데 처음엔 사진의 맨위부터 뜨다가
 // close 버튼 누르고 다시 누르면  사진의 맨 밑부터 떠용ㅠㅠ
+// 그리고 모달창 끄면 웹사이트가 맨 위 섹션부터 다시 시작해요
+// footer에 z-index를 안주면 모달 위에 footer가 떠요
+// 그런데 z-index를 주니까 a 태그가 안먹혀요.....
 
 function modalDS(){
     const modal = document.getElementsByClassName('modal');

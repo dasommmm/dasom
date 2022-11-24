@@ -2,6 +2,11 @@
     opacity: 0;
 } */
 
+.move-top{
+    transform: translateY(-80px);
+    opacity: 0;
+}
+
 
 .move-right{
     transform: translateX(-100px);
