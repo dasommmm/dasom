@@ -8,6 +8,7 @@ function introMove(){
 
     for(let i=0; i<intro.length; i++){
         intro[i].style.transitionDelay = `${i*0.2}s` 
+        // 0번째 intro에는 딜레이 없음 1번 0.2s 2번 0.4s
         window.addEventListener('scroll',()=>{
             console.log(introText.getBoundingClientRect().top - window.innerHeight);
             if(introText.getBoundingClientRect().top - window.innerHeight < 0){
@@ -18,8 +19,6 @@ function introMove(){
         })
     }
 }
-
-
 
 // makeMove('summary-icon','0.6s');
 // makeMove('mockup-png', '0.8s');
@@ -85,12 +84,13 @@ function modalDS(){
     
     const closeModalLush = ()=> {
         modal[0].classList.add('modal-hidden');
-        modal[0].scroll({
+        window.scrollY({
             top:modal[0].offsetTop
         });
     }
 
     // https://kuzuro.blogspot.com/2018/12/js.html
+    // https://www.codeit.kr/community/threads/31861
 
     const openModalPaws = ()=> {
         modal[1].classList.remove('modal-hidden');
