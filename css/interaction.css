@@ -16,18 +16,18 @@
 .show {
     transform : none;
     opacity: 1;
-    transition: 1s;
+    transition-duration: 1s;
 }
 
-.show:nth-of-type(2){
+/* .show:nth-of-type(2){
     transition-delay: 0.2s;
 }
 
 .show:nth-of-type(3){
     transition-delay: 0.4s;
-}
+} */
 
-/* show에 말고 introduce-two랑 three에 딜레이 주면 왜 안될가요 */
+
 
 .on{
     opacity: 1;
