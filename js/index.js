@@ -1,7 +1,32 @@
 introMove();
 makeMove('move-top','0.6s');
 modalDS();
+titleMove();
 
+function titleMove(){
+    const moonOne = document.querySelector('.moon-one')
+    const cloudOne = document.querySelector('.cloud-one')
+    const cloudTwo = document.querySelector('.cloud-two')
+
+    // window.addEventListener('onload',()=>{
+    //     window.setTimeout(function(){
+    //         moonOne.classList.add('moon-move');
+    //     }, 2000);
+    // });
+    // 이건 왜 안되는거죠?
+    window.onload = function(){
+        window.setTimeout(function(){
+                moonOne.classList.add('moon-move');
+                cloudOne.classList.add('cloud1-move');
+                cloudTwo.classList.add('cloud2-move');
+
+            }, 2000);
+    }
+    //제자리에서 움직이는게 애니메이션 끝난 후 자리가 아닌
+    // 초기값으로 지정한 자리에서 움직여서 이상해요ㅜㅜ
+}
+
+// ================================================
 function introMove(){
     const introText = document.querySelector('.intro-text');
     const intro = document.getElementsByClassName('introduce-text');
@@ -10,7 +35,7 @@ function introMove(){
         intro[i].style.transitionDelay = `${i*0.2}s` 
         // 0번째 intro에는 딜레이 없음 1번 0.2s 2번 0.4s
         window.addEventListener('scroll',()=>{
-            console.log(introText.getBoundingClientRect().top - window.innerHeight);
+            // console.log(introText.getBoundingClientRect().top - window.innerHeight);
             if(introText.getBoundingClientRect().top - window.innerHeight < 0){
                 intro[i].classList.add('show');
             }else{
@@ -77,23 +102,28 @@ function modalDS(){
     const closeLush = document.querySelector('.lush-but')
     const closePaws = document.querySelector('.paws-but')
 
-    
+    // console.log(window.scrollY)
+    // if (window.scrollY) {
+    //     window.scroll(0, 0);
+    //   }
+
     const openModalLush = ()=> {
         modal[0].classList.remove('modal-hidden');
+        modal[0].scroll(0, 0);
+        // =============모달 끄고 다시켰을때 맨 위부터 나오게ㅜㅜ 어떻게 하나요
     }
     
     const closeModalLush = ()=> {
         modal[0].classList.add('modal-hidden');
-        window.scrollY({
-            top:modal[0].offsetTop
-        });
     }
+
 
     // https://kuzuro.blogspot.com/2018/12/js.html
     // https://www.codeit.kr/community/threads/31861
 
     const openModalPaws = ()=> {
         modal[1].classList.remove('modal-hidden');
+        modal[1].scroll(0, 0);
     }
     
     const closeModalPaws = ()=> {

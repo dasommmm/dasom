@@ -44,7 +44,8 @@ h1{
     position: absolute;
     width: 60%;
     /* bottom: 17em; */
-    left: 400px;
+    /* left: 400px; */
+    right: 0;
     animation: cloud-one 2s;
     animation-fill-mode: both;
 
@@ -86,14 +87,6 @@ h1{
     animation-fill-mode: both;
 }
 
-
-.새클래스 {
-    animation: 새애니메이션 2s;
-    /* 로드 된 이후에 2초 후 새 클래스 추가 onload 로드된 이후 검색
-    settimeout으로 2초*/
-}
-
-
 @keyframes moon {
     to{
         transform: translateY(-4em);
@@ -114,7 +107,7 @@ h1{
 
 @keyframes mountain {
     to{
-        transform: scale(1) translateY(9em);
+        transform: scale(1) translateY(30%);
     }
 }
 
@@ -1130,13 +1123,13 @@ h3{
 
     @keyframes mountain {
         to{
-            transform: scale(1) translateY(3em);
+            transform: scale(1) translateY(35%);
         }
     }
 
     @keyframes text-move {
         to{
-            transform: translateY(4em) scale(1);
+            transform: translateY(250%) scale(1);
         }
     }
 
@@ -1266,24 +1259,25 @@ h3{
 @media screen and (max-width: 820px){
     h1{
         font-size: 50px;
-        transform: translateY(10em) scale(0.5);
+        transform: translateY(500%) scale(0.5);
 
     }
 
     .moon-one{
         width: 20%;
         left: 3em;
-        bottom: 40em;
+        bottom: 66%;
     }
 
     .cloud-one{
         width: 80%;
-        left: 200px;
+        left: 100px;
         bottom: 400px;
     }
 
     .cloud-two{
-        bottom: 300px;
+        bottom: 200px;
+        left: -50px;
         width: 80%;
     }
 
@@ -1295,14 +1289,14 @@ h3{
 
     @keyframes mountain {
         to{
-            transform: scale(2) translateY(-3em);
+            transform: scale(2) translateY(-10%);
             /* translateY 퍼센트로 주기 */
         }
     }
 
     @keyframes cloud-two {
         to{
-            transform: translateX(-450px);
+            transform: translateX(-100px);
         }
     }
 
@@ -1314,7 +1308,9 @@ h3{
 
     @keyframes text-move {
         to{
-            transform: translateY(7em) scale(1);
+            transform: translateY(250%);
+            font-size: 50px;
+
         }
     }    
 

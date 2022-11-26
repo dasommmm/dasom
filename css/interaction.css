@@ -1,6 +1,3 @@
-/* .pf-opacity{
-    opacity: 0;
-} */
 
 .move-top{
     transform: translateY(-80px);
@@ -27,16 +24,6 @@
     transition-delay: 0.4s;
 } */
 
-
-
-.on{
-    opacity: 1;
-    z-index: 1;
-}
-
-/* 자바할때 on 빼고 작업
-작업하기 어려우니까 on 넣어주고 */
-
 .moon-move{
     animation: moving 2s alternate infinite;
 }
@@ -55,4 +42,18 @@
         transform: translateY(10px);
     }
 }
+
+.새클래스 {
+    animation: 새애니메이션 2s;
+    /* 로드 된 이후에 2초 후 새 클래스 추가 onload 로드된 이후 검색
+    settimeout으로 2초*/
+}
+
+.on{
+    opacity: 1;
+    z-index: 1;
+}
+
+/* 자바할때 on 빼고 작업
+작업하기 어려우니까 on 넣어주고 */
 
