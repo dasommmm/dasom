@@ -57,3 +57,100 @@
 /* 자바할때 on 빼고 작업
 작업하기 어려우니까 on 넣어주고 */
 
+/* .html-progressbar{
+    width: 70%;
+    animation: html-progressbar 2s ease-out;
+}
+
+.css-progressbar{
+    width: 60%;
+    animation: css-progressbar 2s ease-out;
+}
+
+.js-progressbar{
+    width: 35%;
+    animation: js-progressbar 2s ease-out;
+}
+
+.fig-progressbar{
+    width: 70%;
+    animation: fig-progressbar 2s ease-out;
+}
+
+.ps-progressbar{
+    width: 70%;
+    animation: ps-progressbar 2s ease-out;
+}
+
+.ai-progressbar{
+    width: 70%;
+    animation: ai-progressbar 2s ease-out;
+}
+
+.ae-progressbar{
+    width: 30%;
+    animation: ae-progressbar 2s ease-out;
+}
+
+@keyframes html-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 70%;
+    }
+}
+
+@keyframes css-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 60%;
+    }
+}
+
+@keyframes js-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 35%;
+    }
+}
+
+@keyframes fig-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 70%;
+    }
+}
+
+@keyframes ps-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 70%;
+    }
+}
+
+@keyframes ai-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 70%;
+    }
+}
+
+@keyframes ae-progressbar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 30%;
+    }
+} */

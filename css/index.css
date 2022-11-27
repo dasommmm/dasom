@@ -410,37 +410,58 @@ h2{
 
 .html-progressbar{
     width: 70%;
-    animation: html-progressbar 2s ease-out;
+    animation-name: html-progressbar;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    /* animation-play-state: paused; */
 }
 
 .css-progressbar{
     width: 60%;
-    animation: css-progressbar 2s ease-out;
+    animation-name: css-progressbar;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    
 }
 
 .js-progressbar{
     width: 35%;
-    animation: js-progressbar 2s ease-out;
+    /* animation: js-progressbar 2s ease-out; */
+    animation-name:  js-progressbar;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
 
 .fig-progressbar{
     width: 70%;
-    animation: fig-progressbar 2s ease-out;
+    /* animation: fig-progressbar 2s ease-out; */
+    animation-name: fig-progressbar;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
 
 .ps-progressbar{
     width: 70%;
-    animation: ps-progressbar 2s ease-out;
+    /* animation: ps-progressbar 2s ease-out; */
+    animation-name: ps-progressbar;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
 
 .ai-progressbar{
     width: 70%;
-    animation: ai-progressbar 2s ease-out;
+    /* animation: ai-progressbar 2s ease-out; */
+    animation-name: ai-progressbar;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
 
 .ae-progressbar{
     width: 30%;
-    animation: ae-progressbar 2s ease-out;
+    /* animation: ae-progressbar 2s ease-out; */
+    animation-name: ae-progressbar;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
 
 @keyframes html-progressbar {
@@ -806,9 +827,6 @@ bar를 가져와주면 됨 둘다 span임  */
     transform: translate(-50%,-50%);
 }
 
-.arrow{
-    cursor: pointer;
-}
 
 .arrow img{
     width: 104px;
@@ -832,7 +850,7 @@ bar를 가져와주면 됨 둘다 span임  */
 
 .pofol{
     position: absolute;
-    /* opacity: 0; */
+    opacity: 0;
     /* 자바할때 opacity 0 기본으로 해주고! 지금은 헷갈리니까 지워주기 */
 }
 

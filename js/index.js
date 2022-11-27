@@ -1,12 +1,13 @@
+titleMove();
 introMove();
+progressAnimation();
 makeMove('move-top','0.6s');
 modalDS();
-titleMove();
 
 function titleMove(){
-    const moonOne = document.querySelector('.moon-one')
-    const cloudOne = document.querySelector('.cloud-one')
-    const cloudTwo = document.querySelector('.cloud-two')
+    const moonOne = document.querySelector('.moon-js')
+    const cloudOne = document.querySelector('.cloud-js1')
+    const cloudTwo = document.querySelector('.cloud-js2')
 
     // window.addEventListener('onload',()=>{
     //     window.setTimeout(function(){
@@ -22,8 +23,6 @@ function titleMove(){
 
             }, 2000);
     }
-    //제자리에서 움직이는게 애니메이션 끝난 후 자리가 아닌
-    // 초기값으로 지정한 자리에서 움직여서 이상해요ㅜㅜ
 }
 
 // ================================================
@@ -69,7 +68,32 @@ function introMove(){
 //     }
 // }
 // =================================================================
+function progressAnimation(){
+    const tools = document.querySelector('.tools');
+    const bar = document.getElementsByClassName('bar')
+    
+     for(let i = 0; i<bar.length; i++){
+        window.addEventListener('load',()=>{
+            bar[i].style.animationPlayState = 'paused';
+        });
 
+        window.addEventListener('scroll',()=>{
+            console.log(tools.getBoundingClientRect().top );
+
+            if(tools.getBoundingClientRect().top < 0){
+                bar[i].style.animationPlayState = 'running';
+            }
+            // bar[i].style.animationFillMode = 'forwards';
+        });
+
+    }
+
+// 다시 실행하고싶은데 방법을 모르겠어요
+}
+
+
+
+// =====================================================
 function makeMove(className,time){
     const nameCon = document.getElementsByClassName(className);
 
@@ -140,6 +164,28 @@ function modalDS(){
     }
     closePaws.addEventListener("click",closeModalPaws);
 
+}
+
+// =======================================
+slideMake()
+
+function slideMake(){
+    const arrow = document.getElementsByClassName('arrow');
+    const pofol = document.getElementsByClassName('pofol');
+    const pofolContent = document.getElementsByClassName('pofol-content');
+
+    for(var i = 0; i<arrow.length; i++){
+        arrow[i].addEventListener('click',(e)=>{
+            e.preventDefault();
+        });
+    }
+
+    arrow[1].addEventListener('click',()=>{
+        pofol[1].classList.add('on');
+    });
+
+
+    
 }
 
 
