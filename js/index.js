@@ -73,15 +73,18 @@ function progressAnimation(){
     const bar = document.getElementsByClassName('bar')
     
      for(let i = 0; i<bar.length; i++){
-        window.addEventListener('load',()=>{
-            bar[i].style.animationPlayState = 'paused';
-        });
+        // window.addEventListener('load',()=>{
+        //     bar[i].style.animationPlayState = 'paused';
+        // });
 
         window.addEventListener('scroll',()=>{
             console.log(tools.getBoundingClientRect().top );
 
-            if(tools.getBoundingClientRect().top < 0){
-                bar[i].style.animationPlayState = 'running';
+            if(bar[i].getBoundingClientRect().top - window.innerHeight< 0){
+                bar[i].classList.add('play-animation');
+            }else {
+                bar[i].classList.remove('play-animation');
+
             }
             // bar[i].style.animationFillMode = 'forwards';
         });
@@ -131,21 +134,24 @@ function modalDS(){
     //     window.scroll(0, 0);
     //   }
 
-    const openModalLush = ()=> {
+    const openModalLush = (e)=> {
+        console.log(e);
+        e.preventDefault();
+        //기획서 여는 버튼이 a 태그라서 기존페이지가 맨위로 올라가는거라서 디폴트값 없애줌
         modal[0].classList.remove('modal-hidden');
         modal[0].scroll(0, 0);
-        // =============모달 끄고 다시켰을때 맨 위부터 나오게ㅜㅜ 어떻게 하나요
+        // =============모달 끄고 다시켰을때 맨 위부터 나오게
     }
     
     const closeModalLush = ()=> {
         modal[0].classList.add('modal-hidden');
     }
 
-
     // https://kuzuro.blogspot.com/2018/12/js.html
     // https://www.codeit.kr/community/threads/31861
 
-    const openModalPaws = ()=> {
+    const openModalPaws = (e)=> {
+        e.preventDefault();
         modal[1].classList.remove('modal-hidden');
         modal[1].scroll(0, 0);
     }
@@ -154,6 +160,18 @@ function modalDS(){
         modal[1].classList.add('modal-hidden');
     }
     
+    window.addEventListener('click',(e)=>{
+        console.log(e);
+
+        const nowTarget = e.target;
+        if(nowTarget.classList.contains('modal')){
+            nowTarget.classList.add('modal-hidden');
+        }
+    }) //모달창 외의 백그라운드 눌렀을때 꺼지도록
+    // target은 이벤트가 발생한 바로 그 요소를 직접 가리키고 
+    // currentTarget은 이벤트 리스너(EventListener)를 가진 요소를 가리킴
+
+
     for(var i = 0; i < openLush.length; i++){
         openLush[i].addEventListener("click",openModalLush);
     }
@@ -173,19 +191,50 @@ function slideMake(){
     const arrow = document.getElementsByClassName('arrow');
     const pofol = document.getElementsByClassName('pofol');
     const pofolContent = document.getElementsByClassName('pofol-content');
+   
+    let index = 0; //지금 몇페이지인지 0은 첫번재 페이지
 
-    for(var i = 0; i<arrow.length; i++){
+
+    for(let i = 0; i<arrow.length; i++){
         arrow[i].addEventListener('click',(e)=>{
             e.preventDefault();
         });
     }
 
-    arrow[1].addEventListener('click',()=>{
-        pofol[1].classList.add('on');
-    });
+    // arrow[1].addEventListener('click',()=>{
+    //     pofol[1].classList.add('on');
+    // });
 
-
+    function slideOn(){
+        for(let i = 0; i<pofol.length; i++){
+            pofol[i].classList.remove('on');
+        }
+        pofol[index].classList.add('on');
+    }
     
+    slideOn();
+    
+    arrow[1].addEventListener('click',()=>{
+        index++;
+        // index++ -> index = index + 1;
+        
+        if(index > pofol.length-1){
+            index = 0;
+
+        }
+        
+        slideOn();
+    })
+
+    // arrow[2].addEventListener('click',()=>{
+    //     index--;
+        
+    //     if(index > pofol.length){
+    //         index[0]
+    //     }
+        
+    //     slideOn();
+    // })
 }
 
 

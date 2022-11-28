@@ -376,8 +376,7 @@ h2{
 }
 
 .tools-container{
-    padding-top: 100px;
-    padding-bottom: 200px;
+    padding: 100px 20px 200px 20px;
     display: flex;
     justify-content: space-between;
     row-gap: 70px;
@@ -400,6 +399,7 @@ h2{
     border-radius: 20px;
     background-color: #80B0D1;
     height: 40px;
+    animation-fill-mode: both;
 }
 
 .icon-wrapper{
@@ -409,59 +409,86 @@ h2{
 }
 
 .html-progressbar{
-    width: 70%;
-    animation-name: html-progressbar;
+    width: 0%;
     animation-duration: 2s;
     animation-timing-function: ease-out;
     /* animation-play-state: paused; */
 }
 
 .css-progressbar{
-    width: 60%;
-    animation-name: css-progressbar;
+    width: 0%;
+
     animation-duration: 2s;
     animation-timing-function: ease-out;
     
 }
 
 .js-progressbar{
-    width: 35%;
+    width: 0%;
     /* animation: js-progressbar 2s ease-out; */
-    animation-name:  js-progressbar;
+
     animation-duration: 2s;
     animation-timing-function: ease-out;
 }
 
 .fig-progressbar{
-    width: 70%;
+    width: 0%;
     /* animation: fig-progressbar 2s ease-out; */
-    animation-name: fig-progressbar;
+
     animation-duration: 2s;
     animation-timing-function: ease-out;
 }
 
 .ps-progressbar{
-    width: 70%;
+    width: 0%;
     /* animation: ps-progressbar 2s ease-out; */
-    animation-name: ps-progressbar;
+
     animation-duration: 2s;
     animation-timing-function: ease-out;
 }
 
 .ai-progressbar{
-    width: 70%;
+    width: 0%;
     /* animation: ai-progressbar 2s ease-out; */
-    animation-name: ai-progressbar;
+
     animation-duration: 2s;
     animation-timing-function: ease-out;
 }
 
 .ae-progressbar{
-    width: 30%;
+    width: 0%;
     /* animation: ae-progressbar 2s ease-out; */
-    animation-name: ae-progressbar;
+
     animation-duration: 2s;
     animation-timing-function: ease-out;
+}
+
+.html-progressbar.play-animation{
+    animation-name: html-progressbar;
+}
+
+.css-progressbar.play-animation{
+    animation-name: css-progressbar;
+}
+
+.js-progressbar.play-animation{
+    animation-name:  js-progressbar;
+}
+
+.fig-progressbar.play-animation{
+    animation-name: fig-progressbar;
+}
+
+.ps-progressbar.play-animation{
+    animation-name: ps-progressbar;
+}
+
+.ai-progressbar.play-animation{
+    animation-name: ai-progressbar;
+}
+
+.ae-progressbar.play-animation{
+    animation-name: ae-progressbar;
 }
 
 @keyframes html-progressbar {
