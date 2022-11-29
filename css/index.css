@@ -298,10 +298,17 @@ h1{
     padding-top: 90px;
 }
 
-h2{
+/* ======================
+이부분 질문 h2를 inline으로 바꿔야 커서 생기는 하는 이유ㅜㅜ */
+/* 그리고 왜 미묘하게 올라가는지? */
+.typ-wrapper{
+    height: 100px;
+}
+
+.typing{
+    display: inline;
     font-size: 64px;
     font-family: 'Cooper Black', sans-serif;
-    /* padding-top: 130px; */
 }
 
 .intro-deco{
@@ -364,6 +371,7 @@ h2{
 }
 
 .small-title{
+    font-family: 'Cooper Black', sans-serif;
     font-size: 64px;
     color: #E6E6E6;
     text-align: center;
@@ -1386,7 +1394,7 @@ h3{
         padding-top: 30px;
     }
 
-    h2{
+    .typing{
         font-size: 35px;
     }
 

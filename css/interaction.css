@@ -44,10 +44,15 @@
     }
 }
 
-.새클래스 {
-    animation: 새애니메이션 2s;
-    /* 로드 된 이후에 2초 후 새 클래스 추가 onload 로드된 이후 검색
-    settimeout으로 2초*/
+.blink{
+    animation: blink 0.5s infinite;
+    font-size: 64px;
+}
+
+@keyframes blink{
+    to{
+        opacity: 0;
+    }
 }
 
 .on{
@@ -58,100 +63,3 @@
 /* 자바할때 on 빼고 작업
 작업하기 어려우니까 on 넣어주고 */
 
-/* .html-progressbar{
-    width: 70%;
-    animation: html-progressbar 2s ease-out;
-}
-
-.css-progressbar{
-    width: 60%;
-    animation: css-progressbar 2s ease-out;
-}
-
-.js-progressbar{
-    width: 35%;
-    animation: js-progressbar 2s ease-out;
-}
-
-.fig-progressbar{
-    width: 70%;
-    animation: fig-progressbar 2s ease-out;
-}
-
-.ps-progressbar{
-    width: 70%;
-    animation: ps-progressbar 2s ease-out;
-}
-
-.ai-progressbar{
-    width: 70%;
-    animation: ai-progressbar 2s ease-out;
-}
-
-.ae-progressbar{
-    width: 30%;
-    animation: ae-progressbar 2s ease-out;
-}
-
-@keyframes html-progressbar {
-    from{
-        width: 0%;
-    }
-    to{
-        width: 70%;
-    }
-}
-
-@keyframes css-progressbar {
-    from{
-        width: 0%;
-    }
-    to{
-        width: 60%;
-    }
-}
-
-@keyframes js-progressbar {
-    from{
-        width: 0%;
-    }
-    to{
-        width: 35%;
-    }
-}
-
-@keyframes fig-progressbar {
-    from{
-        width: 0%;
-    }
-    to{
-        width: 70%;
-    }
-}
-
-@keyframes ps-progressbar {
-    from{
-        width: 0%;
-    }
-    to{
-        width: 70%;
-    }
-}
-
-@keyframes ai-progressbar {
-    from{
-        width: 0%;
-    }
-    to{
-        width: 70%;
-    }
-}
-
-@keyframes ae-progressbar {
-    from{
-        width: 0%;
-    }
-    to{
-        width: 30%;
-    }
-} */
