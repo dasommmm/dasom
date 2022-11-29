@@ -859,9 +859,6 @@ bar를 가져와주면 됨 둘다 span임  */
     width: 104px;
 }
 
-
-
-
 .slide-contents{
     display: flex;
     border: 2px solid #F7F6F6;
@@ -942,6 +939,7 @@ bar를 가져와주면 됨 둘다 span임  */
     flex-direction: column;
     align-items: center;
     justify-content: center; 
+    opacity: 0;
 }
 
 .pc-hide a{

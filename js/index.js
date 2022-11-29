@@ -201,19 +201,17 @@ function slideMake(){
         });
     }
 
-    // arrow[1].addEventListener('click',()=>{
-    //     pofol[1].classList.add('on');
-    // });
-
     function slideOn(){
         for(let i = 0; i<pofol.length; i++){
             pofol[i].classList.remove('on');
+            pofolContent[i].classList.remove('on');
         }
         pofol[index].classList.add('on');
+        pofolContent[index].classList.add('on');
     }
     
     slideOn();
-    
+
     arrow[1].addEventListener('click',()=>{
         index++;
         // index++ -> index = index + 1;
@@ -226,15 +224,15 @@ function slideMake(){
         slideOn();
     })
 
-    // arrow[2].addEventListener('click',()=>{
-    //     index--;
+    arrow[0].addEventListener('click',()=>{
+        index--;
         
-    //     if(index > pofol.length){
-    //         index[0]
-    //     }
-        
-    //     slideOn();
-    // })
+        if(index < 0){
+            index = pofol.length-1;
+        }
+
+        slideOn();
+    })
 }
 
 
