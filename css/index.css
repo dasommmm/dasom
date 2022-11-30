@@ -32,7 +32,8 @@ main{
 }
 
 h1{
-    font-family: 'Cooper Black', sans-serif;
+    font-family: 'cooper-black-regular', sans-serif;
+    /* font-family: 'Cooper Black', sans-serif; */
     font-size: 100px;
     color: #f6f6f6;
     display: flex;
