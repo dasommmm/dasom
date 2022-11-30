@@ -1,10 +1,12 @@
 titleMove();
 // introMove();
+makeTypoAnimation();
 progressAnimation();
-makeMove('move-right','1s',true)
+makeMove('move-right','0.7s',true)
 makeMove('move-top','0.6s',false);
 makeMove('ss-move','1s',false);
 makeMove('interest-one','3s',true);
+makeMove('ab-move-right','0.5s',true);
 modalDS();
 slideMake();
 
@@ -13,12 +15,11 @@ function titleMove(){
     const cloudOne = document.querySelector('.cloud-js1')
     const cloudTwo = document.querySelector('.cloud-js2')
 
-    // window.addEventListener('onload',()=>{
+    // window.addEventListener('load',()=>{
     //     window.setTimeout(function(){
     //         moonOne.classList.add('moon-move');
     //     }, 2000);
     // });
-    // 이건 왜 안되는거죠?
     window.onload = function(){
         window.setTimeout(function(){
                 moonOne.classList.add('moon-move');
@@ -50,40 +51,55 @@ function titleMove(){
 
 
 // =================================================================
+function makeTypoAnimation(){
 
-function textTyping(){
+    let typoInterval;
+    let typeCheck = true;
     const textcontent = "Hello \n I’m Dasom";
     const text = document.querySelector('.typing');
-    let i = 0;
+    
+    function textTyping(){
+        typeCheck = false;
 
-    function typing(){
-        let txt = textcontent[i++]; //한글자씩 더해줌
-        text.innerHTML += txt === "\n" ? "<br/>": txt; //변수 = 조건식 ? 값1 : 값2;
-        //조건식을 판단하여 조건식이 참이면 값1, 조건식이 거짓이면 값2를 변수에 대입
-        if(i > textcontent.length){
-            text.textContent = "";
-            i = 0; //전체 콘텐츠 길이보다 i가 크면 콘텐츠 비우고 0으로
+        let i = 0;
+        
+        function typing(){
+            let txt = textcontent[i++]; //한글자씩 더해줌
+            text.innerHTML += txt === "\n" ? "<br/>": txt; //변수 = 조건식 ? 값1 : 값2;
+            //조건식을 판단하여 조건식이 참이면 값1, 조건식이 거짓이면 값2를 변수에 대입
+            if(i === textcontent.length){
+                // text.textContent = "";
+                // i = 0; //전체 콘텐츠 길이보다 i가 크면 콘텐츠 비우고 0으로
+                clearInterval(typoInterval);
+            }
         }
+        typoInterval = setInterval(typing,100)
     }
-    setInterval(typing,250)
+    
+    // textTyping();
+    
+    function typo(){
+        const introText = document.querySelector('.intro-text');
+        
+        window.addEventListener('scroll',()=>{
+            // console.log(introText.getBoundingClientRect().top - window.innerHeight);
+            if(introText.getBoundingClientRect().top - window.innerHeight < 0){
+                // intro[i].classList.add('show');
+                // textTyping();
+                if(typeCheck){
+                    textTyping();
+                }
+            }else{
+                clearInterval(typoInterval);
+                typeCheck = true;
+                text.textContent = "";
+            }
+        })
+        
+    }
+
+    typo();
 }
-
-textTyping();
-
-function typo(){
-    const introText = document.querySelector('.intro-text');
-
-    window.addEventListener('scroll',()=>{
-        // console.log(introText.getBoundingClientRect().top - window.innerHeight);
-        if(introText.getBoundingClientRect().top - window.innerHeight < 0){
-            // intro[i].classList.add('show');
-            textTyping();
-        }
-    })
-
-}
-
-// typo();
 
 
 // ================================================
