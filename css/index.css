@@ -881,7 +881,7 @@ bar를 가져와주면 됨 둘다 span임  */
     overflow: hidden;
     position: relative;
     will-change: transform;
-    -webkit-mask-image:-webkit-radial-gradient(white,black)
+    /* -webkit-mask-image:-webkit-radial-gradient(white,black) */
 }
 
 .pofol{
