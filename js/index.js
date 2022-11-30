@@ -1,8 +1,10 @@
 titleMove();
-introMove();
+// introMove();
 progressAnimation();
-makeMove('move-top','0.6s');
-makeMove('ss-move','1s');
+makeMove('move-right','1s',true)
+makeMove('move-top','0.6s',false);
+makeMove('ss-move','1s',false);
+makeMove('interest-one','3s',true);
 modalDS();
 slideMake();
 
@@ -28,23 +30,23 @@ function titleMove(){
 }
 
 // ================================================
-function introMove(){
-    const introText = document.querySelector('.intro-text');
-    const intro = document.getElementsByClassName('introduce-text');
+// function introMove(){
+//     const introText = document.querySelector('.intro-text');
+//     const intro = document.getElementsByClassName('introduce-text');
 
-    for(let i=0; i<intro.length; i++){
-        intro[i].style.transitionDelay = `${i*0.2}s` 
-        // 0번째 intro에는 딜레이 없음 1번 0.2s 2번 0.4s
-        window.addEventListener('scroll',()=>{
-            // console.log(introText.getBoundingClientRect().top - window.innerHeight);
-            if(introText.getBoundingClientRect().top - window.innerHeight < 0){
-                intro[i].classList.add('show');
-            }else{
-                intro[i].classList.remove('show') ; 
-            }
-        })
-    }
-}
+//     for(let i=0; i<intro.length; i++){
+//         intro[i].style.transitionDelay = `${i*0.2}s` 
+//         // 0번째 intro에는 딜레이 없음 1번 0.2s 2번 0.4s
+//         window.addEventListener('scroll',()=>{
+//             // console.log(introText.getBoundingClientRect().top - window.innerHeight);
+//             if(introText.getBoundingClientRect().top - window.innerHeight < 0){
+//                 intro[i].classList.add('show');
+//             }else{
+//                 intro[i].classList.remove('show') ; 
+//             }
+//         })
+//     }
+// }
 
 
 // =================================================================
@@ -113,7 +115,7 @@ function progressAnimation(){
 
 
 // =====================================================
-function makeMove(className,time){
+function makeMove(className,time,delayCheck){
     const nameCon = document.getElementsByClassName(className);
 
     for(let i=0; i<nameCon.length; i++){
@@ -121,17 +123,18 @@ function makeMove(className,time){
             if(nameCon[i].getBoundingClientRect().top - window.innerHeight < 0){
                 nameCon[i].classList.add('show');
                 nameCon[i].style.transitionDuration = time;
-                nameCon[i].style.transitionDelay = `${i*0.2}s`;
+                if(delayCheck){
+                    nameCon[i].style.transitionDelay = `${i*0.2}s`;
+                }
             }else{
                 nameCon[i].classList.remove('show');
                 nameCon[i].style.transitionDuration = time;
-                nameCon[i].style.transitionDelay = `${i*0.2}s`;
+                nameCon[i].style.transitionDelay = `0s`;
             }
         })
     }
 }
 
-makeMove('interest-one','2s','1s');
 // =======================================================
 
 
