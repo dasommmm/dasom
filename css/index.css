@@ -6,7 +6,10 @@
 }
 
 @font-face{
-    font-family:cooper black;font-style:normal;font-weight:400;src:local('Cooper Black'),url(https://fonts.cdnfonts.com/s/14988/COOPBL.woff) format('woff')
+    font-family:'cooper-black';
+    font-style:normal;
+    font-weight:400;
+    src:local('Cooper Black'),url(https://fonts.cdnfonts.com/s/14988/COOPBL.woff) format('woff')
 }
 
 main{
