@@ -9,8 +9,6 @@
     font-family:cooper black;font-style:normal;font-weight:400;src:local('Cooper Black'),url(https://fonts.cdnfonts.com/s/14988/COOPBL.woff) format('woff')
 }
 
-/* @import url('https://fonts.cdnfonts.com/css/cooper-black'); */
-
 main{
     /* padding: 0 32px; */
     padding-top: 100vh;
@@ -32,8 +30,7 @@ main{
 }
 
 h1{
-    font-family: 'cooper-black-regular', sans-serif;
-    /* font-family: 'Cooper Black', sans-serif; */
+    font-family: 'Cooper Black', sans-serif;
     font-size: 100px;
     color: #f6f6f6;
     display: flex;
