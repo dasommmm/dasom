@@ -2,8 +2,9 @@ titleMove();
 introMove();
 progressAnimation();
 makeMove('move-top','0.6s');
+makeMove('ss-move','1s');
 modalDS();
-slideMake()
+slideMake();
 
 function titleMove(){
     const moonOne = document.querySelector('.moon-js')
@@ -45,31 +46,9 @@ function introMove(){
     }
 }
 
-// makeMove('summary-icon','0.6s');
-// makeMove('mockup-png', '0.8s');
-// makeMove('move-right', '0.8s');
 
-// function makeMove(className,time) {
-//     const classContainer = document.getElementsByClassName(className);
-
-//     for(let i=0; i<classContainer.length; i++){
-        
-//         window.addEventListener('scroll', (e)=>{
-//             console.log(classContainer[i].getBoundingClientRect().top);
-
-//             if(classContainer[i].getBoundingClientRect().top - window.innerHeight < 0){
-//                 classContainer[i].classList.add('show')
-//                 classContainer[i].style.transitionDuration = time;
-                
-//             }else{
-//                 classContainer[i].classList.remove('show')
-//                 classContainer[i].style.transitionDuration = '0s';
-//             }
-//         })
-//     }
-// }
 // =================================================================
-textTyping();
+
 function textTyping(){
     const textcontent = "Hello \n I’m Dasom";
     const text = document.querySelector('.typing');
@@ -87,6 +66,22 @@ function textTyping(){
     setInterval(typing,250)
 }
 
+textTyping();
+
+function typo(){
+    const introText = document.querySelector('.intro-text');
+
+    window.addEventListener('scroll',()=>{
+        // console.log(introText.getBoundingClientRect().top - window.innerHeight);
+        if(introText.getBoundingClientRect().top - window.innerHeight < 0){
+            // intro[i].classList.add('show');
+            textTyping();
+        }
+    })
+
+}
+
+// typo();
 
 
 // ================================================
@@ -108,14 +103,13 @@ function progressAnimation(){
                 bar[i].classList.remove('play-animation');
 
             }
-            // bar[i].style.animationFillMode = 'forwards';
         });
 
     }
-
-// 다시 실행하고싶은데 방법을 모르겠어요
 }
 
+// 다시 실행하는 법 play-animation이라는 클래스를 따로 만들어서
+// 애니메이션 네임 넣어줌s
 
 
 // =====================================================
@@ -127,14 +121,17 @@ function makeMove(className,time){
             if(nameCon[i].getBoundingClientRect().top - window.innerHeight < 0){
                 nameCon[i].classList.add('show');
                 nameCon[i].style.transitionDuration = time;
+                nameCon[i].style.transitionDelay = `${i*0.2}s`;
             }else{
                 nameCon[i].classList.remove('show');
                 nameCon[i].style.transitionDuration = time;
+                nameCon[i].style.transitionDelay = `${i*0.2}s`;
             }
         })
     }
 }
 
+makeMove('interest-one','2s','1s');
 // =======================================================
 
 

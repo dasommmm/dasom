@@ -611,6 +611,7 @@ bar를 가져와주면 됨 둘다 span임  */
     border-top: 1px solid #E6E6E6;
     position: relative;
     flex-basis: calc(40% - 16px);
+    opacity: 0;
 }
 
 .ss-explanation{
@@ -660,11 +661,14 @@ bar를 가져와주면 됨 둘다 span임  */
 }
 
 .svg-move5{
-    animation: svg-move4 1s alternate infinite ;
+    animation: svg-move4 3s alternate infinite ;
+    transform-box: fill-box;
+    transform-origin: center;
 }
 
 .svg-move6{
     animation: svg-move5 1s alternate infinite ;
+    
 }
 
 
@@ -688,7 +692,7 @@ bar를 가져와주면 됨 둘다 span임  */
 
 @keyframes svg-move4 {
     to{
-        transform: rotate(10deg);
+        transform: rotate(360deg);
     }
 }
 /* 제자리에서 도는거랑 제자리에서 커지는거 어떻게? */
