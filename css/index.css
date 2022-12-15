@@ -1131,19 +1131,7 @@ h3{
     width: 100px;
     left: 17%;
     bottom: 71%;
-    /* animation: moonx 2.5s infinite cubic-bezier(0, 0.5, 0.5, 1) */
 }
-
-
-
-/* @keyframes moonx{
-    50% {
-        animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
-        transform: translateX(300px);
-    }
-} */
-/* 포물선으로 움직이는ㄱ 어떻게해요 */
-
 
 .ellipse{
     width: 50em;

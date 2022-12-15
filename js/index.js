@@ -65,8 +65,14 @@ function makeTypoAnimation(){
         
         function typing(){
             let txt = textcontent[i++]; //한글자씩 더해줌
-            text.innerHTML += txt === "\n" ? "<br/>": txt; //변수 = 조건식 ? 값1 : 값2;
+            // text.innerHTML += txt === "\n" ? "<br/>": txt; //변수 = 조건식 ? 값1 : 값2;
             //조건식을 판단하여 조건식이 참이면 값1, 조건식이 거짓이면 값2를 변수에 대입
+            if(txt === "\n"){
+                text.innerHTML += "<br/>";
+            }else{
+                text.innerHTML += txt;
+            }
+
             if(i === textcontent.length){
                 // text.textContent = "";
                 // i = 0; //전체 콘텐츠 길이보다 i가 크면 콘텐츠 비우고 0으로
