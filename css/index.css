@@ -24,6 +24,10 @@
     src: url(/font/COOPBL.woff);
 } */
 
+@font-face {
+    font-family: "Cooper";
+    src: url("https://assets.codepen.io/383755/cooper-black-webfont.woff") format("woff");
+  }
 
 main{
     /* padding: 0 32px; */
@@ -48,7 +52,8 @@ main{
 h1{
     /* font-family: 'Cooper Black Regular'; */
     /* font-family:'cooper-black'; */
-    font-family: 'Cooper Black', sans-serif;
+    /* font-family: 'Cooper Black', sans-serif; */
+    font-family: "Cooper";
     font-size: 100px;
     color: #f6f6f6;
     display: flex;
