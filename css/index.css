@@ -13,7 +13,7 @@
 } */
 
 @font-face {
-    font-family: 'Cooper Black Regular';
+    font-family: 'cooper-black-regular';
     font-style: normal;
     font-weight: normal;
     src: local('Cooper Black Regular'), url('/font/COOPBL.woff') format('woff');
@@ -42,7 +42,7 @@ main{
 
 h1{
     /* font-family:'cooper-black'; */
-    font-family: 'cooper-black-regular','Cooper Black Regular', sans-serif;
+    font-family: 'cooper-black-regular', sans-serif;
     font-size: 100px;
     color: #f6f6f6;
     display: flex;
